@@ -1,13 +1,13 @@
 Package: odds.converter
 Type: Package
 Title: Betting Odds Conversion
-Version: 1.1
-Date: 2015-05-31
+Version: 1.2
+Date: 2015-09-25
 Author: Marco Blume
 Maintainer: Marco Blume <marco.blume@pinnaclesports.com>
 Description: Conversion between the most common odds types for sports betting. Hong Kong odds, US odds, Decimal odds, Indonesian odds, Malaysian odds, and raw Probability are covered in this package. 
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2015-06-04 15:15:08 UTC; administrator
+Packaged: 2015-09-25 15:58:53 UTC; MarcoB
 Repository: CRAN
-Date/Publication: 2015-06-04 18:15:53
+Date/Publication: 2015-09-25 20:33:32
