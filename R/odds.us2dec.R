@@ -4,8 +4,11 @@
 #'
 #' @return A vector of Decimal odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2dec(c(-200,150))
 odds.us2dec <- function (x) {
-        ifelse (x >= 100 & x < 100,NA,ifelse(x >0,x/100+1,-100/x+1))
+        ifelse (x > -100 & x < 100,NA,ifelse(x >0,x/100+1,-100/x+1))
 }              
+
