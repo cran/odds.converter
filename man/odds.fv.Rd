@@ -18,7 +18,7 @@ odds.fv(..., input = "us", output = "us",
 "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 "hk" for Hong Kong odds, "indo" for Indonesian odds}
 
-\item{Vectorized2wayOutput1stElement}{This speeds up the calculation as the output is a a vector that contains the FV of the first input. Usefull in dplyr chains}
+\item{Vectorized2wayOutput1stElement}{This speeds up the calculation as the output is a a vector that contains the FV of the first input. Usefull in dplyr chains.}
 }
 \value{
 A vector or a matrix of the fair values of the the given vigged values in the format chosen in output
@@ -35,4 +35,3 @@ odds.fv(df,input = "dec",output = "prob")
 odds.fv(df$Home,df$Away,input="dec",output="prob")
 odds.fv(df$Home,df$Away,input="dec",output="prob",Vectorized2wayOutput1stElement = TRUE)
 }
-

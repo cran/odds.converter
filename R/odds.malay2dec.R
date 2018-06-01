@@ -9,5 +9,9 @@
 #' @examples
 #' odds.malay2dec(c(0.5,-0.6))
 odds.malay2dec <- function (x) {
-        ifelse (x < -1 | x > 1,NA,odds.us2dec(odds.malay2us(x)))
+  dec <- x
+  dec[] <- NA_real_
+  dec[which(x > 0 & x <= 1)] <- x[which(x > 0 & x <= 1)] + 1
+  dec[which(x >= -1 & x < 0)] <- -1 / x[which(x >= -1 & x < 0)] + 1
+  dec
 }

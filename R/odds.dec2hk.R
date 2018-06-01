@@ -9,5 +9,8 @@
 #' @examples
 #' odds.dec2hk(c(1.93,2.05))
 odds.dec2hk <- function (x) {
-        ifelse (x <= 1,NA,x-1)
+  hk <- x
+  hk[] <- NA_real_
+  hk[which(x > 1)] <- x[which(x > 1)] - 1
+  hk
 }

@@ -10,7 +10,7 @@ odds.us2all(x)
 \item{x}{A vector of US odds}
 }
 \value{
-A dataframe
+A data.frame
 }
 \description{
 Convert US Odds to all other formats
@@ -18,4 +18,3 @@ Convert US Odds to all other formats
 \examples{
 odds.us2all(c(-200,105))
 }
-

@@ -9,5 +9,9 @@
 #' @examples
 #' odds.indo2dec(c(1.93,2.05))
 odds.indo2dec <- function (x) {
-        ifelse (x > -1 & x < 1,NA,odds.us2dec(odds.indo2us(x)))
+  dec <- x
+  dec[] <- NA_real_
+  dec[which(x <= -1)] <- -1 / x[which(x <= -1)] + 1
+  dec[which(x >= 1)] <- x[which(x >= 1)] + 1
+  dec
 }

@@ -8,6 +8,9 @@
 #'
 #' @examples
 #' odds.hk2us(c(1.93,0.05))
-odds.hk2prob<- function (x){
-        ifelse (x <= 0,NA,odds.dec2prob(x+1))
+odds.hk2prob<- function (x) {
+  prob <- x
+  prob[] <- NA_real_
+  prob[which(x > 0)] <- 1 / (x[which(x > 0)] + 1)
+  prob
 }

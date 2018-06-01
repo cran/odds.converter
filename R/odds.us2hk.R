@@ -9,5 +9,9 @@
 #' @examples
 #' odds.us2hk(c(-200,150))
 odds.us2hk <- function (x){
-        odds.us2dec(x)-1
+  hk <- x
+  hk[] <- NA_real_
+  hk[which(x <= -100)] <- -100 / x[which(x <= -100)]
+  hk[which(x >= 100)] <- x[which(x >= 100)] / 100
+  hk
 }

@@ -9,5 +9,8 @@
 #' @examples
 #' odds.us2malay(c(-200,150))
 odds.us2malay <- function (x) {
-        ifelse(x > -100 & x < 100,NA,-100/x)
+  malay <- x
+  malay[] <- NA_real_
+  malay[which(x <= -100 | x >= 100)] <- -100 / x[which(x <= -100 | x >= 100)]
+  malay
 }

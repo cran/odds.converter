@@ -10,7 +10,7 @@ odds.malay2all(x)
 \item{x}{A vector of Malaysian odds}
 }
 \value{
-A dataframe
+A data.frame
 }
 \description{
 Convert Malaysian Odds to all other formats
@@ -18,4 +18,3 @@ Convert Malaysian Odds to all other formats
 \examples{
 odds.malay2all(c(0.5,-0.6))
 }
-
